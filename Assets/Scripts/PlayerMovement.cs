@@ -8,8 +8,14 @@ public class PlayerMovement : MonoBehaviour
     public float horizontalSpeed = 3;
     public float rightLimit = 5.5f;
     public float leftLimit = -5.5f;
+    [SerializeField] bool isRunning;
     void Update()
     {
+        if(isRunning == false)
+        {
+            isRunning = true;
+            StartCoroutine(AddDistance());
+        }
         transform.Translate(Vector3.forward * Time.deltaTime *  playerSpeed, Space.World);
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
@@ -29,5 +35,12 @@ public class PlayerMovement : MonoBehaviour
             }
             
         }
+    }
+
+    IEnumerator AddDistance()
+    {
+        yield return new WaitForSeconds(0.15f);
+        MasterInfo.distanceRun +=1;
+        isRunning = false;
     }
 }
