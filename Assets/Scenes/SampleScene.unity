@@ -337,31 +337,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4646933745565138, guid: 4983f395b2610de4e9f688a87bbd9af9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.388733
+      value: -10.21
       objectReference: {fileID: 0}
     - target: {fileID: 4646933745565138, guid: 4983f395b2610de4e9f688a87bbd9af9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3524766
+      value: 1.12
       objectReference: {fileID: 0}
     - target: {fileID: 4646933745565138, guid: 4983f395b2610de4e9f688a87bbd9af9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20.098314
+      value: -19.08
       objectReference: {fileID: 0}
     - target: {fileID: 4646933745565138, guid: 4983f395b2610de4e9f688a87bbd9af9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.8486021
       objectReference: {fileID: 0}
     - target: {fileID: 4646933745565138, guid: 4983f395b2610de4e9f688a87bbd9af9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
+      value: 0.000000018546787
       objectReference: {fileID: 0}
     - target: {fileID: 4646933745565138, guid: 4983f395b2610de4e9f688a87bbd9af9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.5290317
       objectReference: {fileID: 0}
     - target: {fileID: 4646933745565138, guid: 4983f395b2610de4e9f688a87bbd9af9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.000000011562355
       objectReference: {fileID: 0}
     - target: {fileID: 4646933745565138, guid: 4983f395b2610de4e9f688a87bbd9af9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -369,7 +369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4646933745565138, guid: 4983f395b2610de4e9f688a87bbd9af9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -63.88
       objectReference: {fileID: 0}
     - target: {fileID: 4646933745565138, guid: 4983f395b2610de4e9f688a87bbd9af9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -639,6 +639,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
   thePlayer: {fileID: 2087741658}
   playerAnimation: {fileID: 1444964429}
+  collisionFX: {fileID: 356330214}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 237673997}
 --- !u!65 &73355908
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1623,6 +1626,101 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4956255927207046, guid: c04be9f92ebf58b46b2204ac3aaa8785, type: 3}
   m_PrefabInstance: {fileID: 225686030}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &237673997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 237673998}
+  - component: {fileID: 237674000}
+  - component: {fileID: 237673999}
+  - component: {fileID: 237674001}
+  m_Layer: 5
+  m_Name: FadeOut
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &237673998
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237673997}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 730366347}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -0.000030517578}
+  m_SizeDelta: {x: 0, y: -0.000030517578}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &237673999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237673997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RawImage
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 0}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &237674000
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237673997}
+  m_CullTransparentMesh: 1
+--- !u!95 &237674001
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237673997}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4e2cfffd654c695448607febfbc37ead, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &237875024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2536,6 +2634,135 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
   m_PrefabInstance: {fileID: 355760230}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &356330213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 356330215}
+  - component: {fileID: 356330214}
+  m_Layer: 0
+  m_Name: CollisionFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &356330214
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356330213}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 9d7a9c9c35d4cbb4fad72cdf5dba3dd1, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &356330215
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356330213}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 624293822}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &358352193
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4412,7 +4639,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.48
+      value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4420,7 +4647,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.76
+      value: -0.22
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4911,6 +5138,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
   thePlayer: {fileID: 2087741658}
   playerAnimation: {fileID: 1444964429}
+  collisionFX: {fileID: 356330214}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 237673997}
 --- !u!65 &605563089
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5117,6 +5347,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
   thePlayer: {fileID: 2087741658}
   playerAnimation: {fileID: 1444964429}
+  collisionFX: {fileID: 356330214}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 237673997}
 --- !u!1 &612617055
 GameObject:
   m_ObjectHideFlags: 0
@@ -5555,6 +5788,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1614419000}
+  - {fileID: 356330215}
   m_Father: {fileID: 249731230}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &647718154
@@ -6313,6 +6547,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
   thePlayer: {fileID: 2087741658}
   playerAnimation: {fileID: 1444964429}
+  collisionFX: {fileID: 356330214}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 237673997}
 --- !u!65 &704972874
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6741,6 +6978,7 @@ RectTransform:
   m_Children:
   - {fileID: 1180019011}
   - {fileID: 1544195846}
+  - {fileID: 237673998}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7230,13 +7468,14 @@ GameObject:
   - component: {fileID: 778914163}
   - component: {fileID: 778914162}
   - component: {fileID: 778914161}
+  - component: {fileID: 778914164}
   m_Layer: 0
   m_Name: Crate01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &778914160
 Transform:
   m_ObjectHideFlags: 0
@@ -7267,7 +7506,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -7280,7 +7519,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778914159}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -7330,6 +7569,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778914159}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &778914164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778914159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f348dadb47e6145a97158c7864726f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
+  thePlayer: {fileID: 2087741658}
+  playerAnimation: {fileID: 1444964429}
+  collisionFX: {fileID: 356330214}
+  mainCam: {fileID: 0}
+  fadeOut: {fileID: 0}
 --- !u!1001 &791043885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8417,7 +8673,7 @@ Transform:
   m_GameObject: {fileID: 905683694}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7478584, z: -0, w: 0.66385835}
-  m_LocalPosition: {x: -0.12, y: 1.5, z: -10.410004}
+  m_LocalPosition: {x: -5.19, y: 1.5, z: -22.53}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8438,6 +8694,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
   thePlayer: {fileID: 2087741658}
   playerAnimation: {fileID: 1444964429}
+  collisionFX: {fileID: 356330214}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 237673997}
 --- !u!65 &905683697
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9115,6 +9374,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9196,6 +9456,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2087741662}
   m_LocalEulerAnglesHint: {x: 24.923, y: 0, z: 0}
+--- !u!95 &963194229
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6327950747944dc43abb9a9c5c0467e2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &971990074
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9830,6 +10112,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
   thePlayer: {fileID: 2087741658}
   playerAnimation: {fileID: 1444964429}
+  collisionFX: {fileID: 356330214}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 237673997}
 --- !u!65 &1011329629
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10678,7 +10963,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.9097295
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10686,7 +10971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.84554577
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10752,7 +11037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.83
+      value: 0.19
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10760,7 +11045,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.14
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11782,7 +12067,7 @@ Transform:
   m_GameObject: {fileID: 1277584445}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.76, y: 1.5, z: 3.619995}
+  m_LocalPosition: {x: -4.42, y: 1.5, z: -0.49}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11803,6 +12088,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
   thePlayer: {fileID: 2087741658}
   playerAnimation: {fileID: 1444964429}
+  collisionFX: {fileID: 356330214}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 237673997}
 --- !u!65 &1277584448
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13031,31 +13319,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4646933745565138, guid: 4983f395b2610de4e9f688a87bbd9af9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.388733
+      value: -8.540141
       objectReference: {fileID: 0}
     - target: {fileID: 4646933745565138, guid: 4983f395b2610de4e9f688a87bbd9af9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.3524766
+      value: 1.61
       objectReference: {fileID: 0}
     - target: {fileID: 4646933745565138, guid: 4983f395b2610de4e9f688a87bbd9af9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20.098314
+      value: -19.136168
       objectReference: {fileID: 0}
     - target: {fileID: 4646933745565138, guid: 4983f395b2610de4e9f688a87bbd9af9, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9185744
       objectReference: {fileID: 0}
     - target: {fileID: 4646933745565138, guid: 4983f395b2610de4e9f688a87bbd9af9, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.000000021855694
+      value: 0.000000020076081
       objectReference: {fileID: 0}
     - target: {fileID: 4646933745565138, guid: 4983f395b2610de4e9f688a87bbd9af9, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.3952481
       objectReference: {fileID: 0}
     - target: {fileID: 4646933745565138, guid: 4983f395b2610de4e9f688a87bbd9af9, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.000000008638422
       objectReference: {fileID: 0}
     - target: {fileID: 4646933745565138, guid: 4983f395b2610de4e9f688a87bbd9af9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13063,7 +13351,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4646933745565138, guid: 4983f395b2610de4e9f688a87bbd9af9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -46.563
       objectReference: {fileID: 0}
     - target: {fileID: 4646933745565138, guid: 4983f395b2610de4e9f688a87bbd9af9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -13707,6 +13995,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
   thePlayer: {fileID: 2087741658}
   playerAnimation: {fileID: 1444964429}
+  collisionFX: {fileID: 356330214}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 237673997}
 --- !u!1001 &1462132646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15028,6 +15319,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
   thePlayer: {fileID: 2087741658}
   playerAnimation: {fileID: 1444964429}
+  collisionFX: {fileID: 356330214}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 237673997}
 --- !u!1 &1618438358
 GameObject:
   m_ObjectHideFlags: 0
@@ -15388,6 +15682,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
   thePlayer: {fileID: 2087741658}
   playerAnimation: {fileID: 1444964429}
+  collisionFX: {fileID: 356330214}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 237673997}
 --- !u!65 &1661239498
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15842,6 +16139,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
   thePlayer: {fileID: 2087741658}
   playerAnimation: {fileID: 1444964429}
+  collisionFX: {fileID: 356330214}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 237673997}
 --- !u!1001 &1746215572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15868,7 +16168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.59
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalPosition.y
@@ -15876,7 +16176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.37
+      value: -0.04
       objectReference: {fileID: 0}
     - target: {fileID: 4949955557972128, guid: c7821bc923171f24094e69062402d005, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16499,6 +16799,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
   thePlayer: {fileID: 2087741658}
   playerAnimation: {fileID: 1444964429}
+  collisionFX: {fileID: 356330214}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 237673997}
 --- !u!1001 &1821647268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16680,6 +16983,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
   thePlayer: {fileID: 2087741658}
   playerAnimation: {fileID: 1444964429}
+  collisionFX: {fileID: 356330214}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 237673997}
 --- !u!65 &1826323513
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17553,7 +17859,7 @@ Transform:
   m_GameObject: {fileID: 1946260168}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.1, y: 1.5, z: -7.12}
+  m_LocalPosition: {x: -4.61, y: 1.5, z: -8.89}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17574,6 +17880,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
   thePlayer: {fileID: 2087741658}
   playerAnimation: {fileID: 1444964429}
+  collisionFX: {fileID: 356330214}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 237673997}
 --- !u!65 &1946260171
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17743,7 +18052,7 @@ Transform:
   m_GameObject: {fileID: 1958426439}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7478584, z: -0, w: 0.66385835}
-  m_LocalPosition: {x: -4.226583, y: 1.5, z: 23.94965}
+  m_LocalPosition: {x: 4.7, y: 1.5, z: 15.38}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -17764,6 +18073,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
   thePlayer: {fileID: 2087741658}
   playerAnimation: {fileID: 1444964429}
+  collisionFX: {fileID: 356330214}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 237673997}
 --- !u!65 &1958426442
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17892,6 +18204,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
   thePlayer: {fileID: 2087741658}
   playerAnimation: {fileID: 1444964429}
+  collisionFX: {fileID: 356330214}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 237673997}
 --- !u!65 &1974714421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19033,6 +19348,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
   thePlayer: {fileID: 2087741658}
   playerAnimation: {fileID: 1444964429}
+  collisionFX: {fileID: 356330214}
+  mainCam: {fileID: 963194225}
+  fadeOut: {fileID: 237673997}
 --- !u!1001 &2073633872
 PrefabInstance:
   m_ObjectHideFlags: 0
