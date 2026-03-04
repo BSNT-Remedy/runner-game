@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
             isRunning = true;
             StartCoroutine(AddDistance());
         }
-        transform.Translate(Vector3.forward * Time.deltaTime *  playerSpeed, Space.World);
+        // transform.Translate(Vector3.forward * Time.deltaTime *  playerSpeed, Space.World);
 
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
