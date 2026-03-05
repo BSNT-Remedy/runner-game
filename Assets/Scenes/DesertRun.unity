@@ -19732,37 +19732,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollectCoin
   coinFX: {fileID: 1614419001}
---- !u!1 &1480630971
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1480630972}
-  m_Layer: 0
-  m_Name: Segments
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1480630972
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1480630971}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8903, y: 0.51772, z: -4.30298}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1487813862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27212,6 +27181,7 @@ GameObject:
   - component: {fileID: 2087741660}
   - component: {fileID: 2087741659}
   - component: {fileID: 2087741663}
+  - component: {fileID: 2087741664}
   m_Layer: 0
   m_Name: Timmy
   m_TagString: Untagged
@@ -27324,7 +27294,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087741658}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af964160b7b652f4986c9e28411fe725, type: 3}
   m_Name: 
@@ -27334,6 +27304,22 @@ MonoBehaviour:
   rightLimit: 5.5
   leftLimit: -5.5
   isRunning: 0
+--- !u!114 &2087741664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2087741658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 025ff566d916a014faa1e61fb4dc0f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LaneSwipeController
+  laneCount: 3
+  laneSpacing: 2.5
+  slideSpeed: 12
+  minimumSwipeDistance: 60
 --- !u!1 &2095526733
 GameObject:
   m_ObjectHideFlags: 0
@@ -28453,7 +28439,6 @@ SceneRoots:
   - {fileID: 1576130754}
   - {fileID: 547078978}
   - {fileID: 1162579126}
-  - {fileID: 1480630972}
   - {fileID: 358429260}
   - {fileID: 730366347}
   - {fileID: 509857623}
