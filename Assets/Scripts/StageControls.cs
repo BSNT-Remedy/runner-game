@@ -120,6 +120,13 @@ public class StageControls : MonoBehaviour
 
     public void PressPlay()
     {
-        SceneManager.LoadScene(3);
+        if(currentStageIndex == 0){
+            SceneManager.LoadScene(3);
+        }else if(currentStageIndex == 1) {
+            SceneManager.LoadScene(4);
+        }else if(currentStageIndex == 2) {
+            SceneManager.LoadScene(5);
+        }
+        
     }
 }
