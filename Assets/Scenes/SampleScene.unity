@@ -2189,38 +2189,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1007908850}
-  - component: {fileID: 1007908847}
   m_Layer: 0
   m_Name: InputSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1007908847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1007908846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7599a1985e2f1f4686858b976a4ae0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectManipulator
-  cam: {fileID: 2047788363}
-  selector: {fileID: 0}
-  modeManager: {fileID: 0}
-  grabLerp: 20
-  planeDragSensitivity: 4
-  rotateSensitivityDegPerPixel: 0.4
-  rotateDeadzonePixels: 1
-  rotateAroundWorldUp: 1
-  scaleSensitivity: 0.0035
-  minScale: 0.2
-  maxScale: 4
-  scaleDeadzonePixels: 1
+  m_IsActive: 0
 --- !u!4 &1007908850
 Transform:
   m_ObjectHideFlags: 0
@@ -2234,9 +2209,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 552044461}
   - {fileID: 2080498290}
   - {fileID: 1301107088}
+  - {fileID: 552044461}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1010204375
@@ -3743,9 +3718,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BlenderMode
   collisionDetect: {fileID: 620238406}
-  touchManager: {fileID: 1208721944}
+  inputSystem: {fileID: 1007908846}
   thePlayer: {fileID: 1940609165}
-  manipulatableObject: {fileID: 971585393}
   hasEntered: 0
 --- !u!1 &1941786163
 GameObject:

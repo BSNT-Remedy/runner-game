@@ -3,9 +3,8 @@ using UnityEngine;
 public class BlenderMode : MonoBehaviour
 {
     public CollisionDetect collisionDetect;
-    [SerializeField] GameObject touchManager;
+    [SerializeField] GameObject inputSystem;
     [SerializeField] GameObject thePlayer;
-    [SerializeField] GameObject manipulatableObject;
     public bool hasEntered;
 
     public void OnTriggerEnter(Collider other)
@@ -16,9 +15,7 @@ public class BlenderMode : MonoBehaviour
         {
             collisionDetect.DisableSegmentMovement();
             thePlayer.GetComponent<LaneSwipeController>().enabled = false;
-            // touchManager.GetComponent<TouchGestureManipulator3D>().enabled = true;
-            touchManager.GetComponent<Rotate>().enabled = true;
-            // manipulatableObject.GetComponent<LaneSwipeController>().enabled = true;
+            inputSystem.SetActive(true);
             hasEntered = true;
         }
     }
