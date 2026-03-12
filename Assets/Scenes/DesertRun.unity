@@ -27294,15 +27294,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087741658}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af964160b7b652f4986c9e28411fe725, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  playerSpeed: 6
-  horizontalSpeed: 4.5
-  rightLimit: 5.5
-  leftLimit: -5.5
   isRunning: 0
 --- !u!114 &2087741664
 MonoBehaviour:
