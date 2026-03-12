@@ -3,7 +3,7 @@ using UnityEngine;
 public class MouseDragOnXZ : MonoBehaviour
 {
     [SerializeField] private Camera cam;
-    public float heightY = 0.5f;       // keep the cube at a fixed Y height
+    // public float heightY = 0.5f;       // keep the cube at a fixed Y height
     public LayerMask mask = ~0;
     private Plane ground;
     private bool dragging;
@@ -12,7 +12,7 @@ public class MouseDragOnXZ : MonoBehaviour
     void Awake()
     {
         if (!cam) cam = Camera.main;
-        ground = new Plane(Vector3.up, new Vector3(0, heightY, 0));
+        ground = new Plane(Vector3.up, new Vector3(0, 0, 0));
     }
 
     void Update()
@@ -43,7 +43,7 @@ public class MouseDragOnXZ : MonoBehaviour
             {
                 var p = r.origin + r.direction * t;
                 Vector3 target = p + grabOffset;
-                target.y = heightY;
+                // target.y = heightY;
                 transform.position = target;
             }
         }

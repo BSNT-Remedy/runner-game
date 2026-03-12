@@ -179,6 +179,7 @@ public class TouchGestureManipulator3D : MonoBehaviour
 
     private void HandleTwoFingerGesture()
     {
+        Debug.Log("MultiTouchEnabled: " + Input.multiTouchEnabled);
         Touch t0 = Input.GetTouch(0);
         Touch t1 = Input.GetTouch(Input.touchCount > 1 ? 1 : 0);
         if (blockWhenPointerOverUI && (IsOverUI(t0.fingerId) || IsOverUI(t1.fingerId))) return;

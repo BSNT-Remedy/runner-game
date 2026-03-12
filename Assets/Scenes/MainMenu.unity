@@ -2131,11 +2131,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f348dadb47e6145a97158c7864726f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
+  segment1: {fileID: 0}
+  segment2: {fileID: 0}
+  segment3: {fileID: 0}
   thePlayer: {fileID: 0}
   playerAnimation: {fileID: 0}
   collisionFX: {fileID: 0}
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
+  hasCollided: 0
 --- !u!65 &317206893
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3632,11 +3636,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f348dadb47e6145a97158c7864726f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
+  segment1: {fileID: 0}
+  segment2: {fileID: 0}
+  segment3: {fileID: 0}
   thePlayer: {fileID: 0}
   playerAnimation: {fileID: 0}
   collisionFX: {fileID: 0}
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
+  hasCollided: 0
 --- !u!65 &574843147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3887,11 +3895,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f348dadb47e6145a97158c7864726f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
+  segment1: {fileID: 0}
+  segment2: {fileID: 0}
+  segment3: {fileID: 0}
   thePlayer: {fileID: 0}
   playerAnimation: {fileID: 0}
   collisionFX: {fileID: 0}
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
+  hasCollided: 0
 --- !u!65 &593924257
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5227,11 +5239,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f348dadb47e6145a97158c7864726f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
+  segment1: {fileID: 0}
+  segment2: {fileID: 0}
+  segment3: {fileID: 0}
   thePlayer: {fileID: 0}
   playerAnimation: {fileID: 0}
   collisionFX: {fileID: 0}
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
+  hasCollided: 0
 --- !u!65 &760331041
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6507,11 +6523,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f348dadb47e6145a97158c7864726f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
+  segment1: {fileID: 0}
+  segment2: {fileID: 0}
+  segment3: {fileID: 0}
   thePlayer: {fileID: 0}
   playerAnimation: {fileID: 0}
   collisionFX: {fileID: 0}
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
+  hasCollided: 0
 --- !u!65 &894919784
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7470,11 +7490,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f348dadb47e6145a97158c7864726f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
+  segment1: {fileID: 0}
+  segment2: {fileID: 0}
+  segment3: {fileID: 0}
   thePlayer: {fileID: 0}
   playerAnimation: {fileID: 0}
   collisionFX: {fileID: 0}
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
+  hasCollided: 0
 --- !u!65 &1153189099
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8418,7 +8442,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 1080, y: 1920}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
@@ -9006,11 +9030,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f348dadb47e6145a97158c7864726f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
+  segment1: {fileID: 0}
+  segment2: {fileID: 0}
+  segment3: {fileID: 0}
   thePlayer: {fileID: 0}
   playerAnimation: {fileID: 0}
   collisionFX: {fileID: 0}
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
+  hasCollided: 0
 --- !u!65 &1337408597
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9476,11 +9504,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f348dadb47e6145a97158c7864726f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
+  segment1: {fileID: 0}
+  segment2: {fileID: 0}
+  segment3: {fileID: 0}
   thePlayer: {fileID: 0}
   playerAnimation: {fileID: 0}
   collisionFX: {fileID: 0}
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
+  hasCollided: 0
 --- !u!65 &1405735258
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10614,11 +10646,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f348dadb47e6145a97158c7864726f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
+  segment1: {fileID: 0}
+  segment2: {fileID: 0}
+  segment3: {fileID: 0}
   thePlayer: {fileID: 0}
   playerAnimation: {fileID: 0}
   collisionFX: {fileID: 0}
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
+  hasCollided: 0
 --- !u!65 &1523989702
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12140,11 +12176,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f348dadb47e6145a97158c7864726f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
+  segment1: {fileID: 0}
+  segment2: {fileID: 0}
+  segment3: {fileID: 0}
   thePlayer: {fileID: 0}
   playerAnimation: {fileID: 0}
   collisionFX: {fileID: 0}
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
+  hasCollided: 0
 --- !u!65 &1809620289
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13284,11 +13324,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f348dadb47e6145a97158c7864726f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
+  segment1: {fileID: 0}
+  segment2: {fileID: 0}
+  segment3: {fileID: 0}
   thePlayer: {fileID: 0}
   playerAnimation: {fileID: 0}
   collisionFX: {fileID: 0}
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
+  hasCollided: 0
 --- !u!65 &2081299247
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13575,11 +13619,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50f348dadb47e6145a97158c7864726f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CollisionDetect
+  segment1: {fileID: 0}
+  segment2: {fileID: 0}
+  segment3: {fileID: 0}
   thePlayer: {fileID: 0}
   playerAnimation: {fileID: 0}
   collisionFX: {fileID: 0}
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
+  hasCollided: 0
 --- !u!65 &2140501219
 BoxCollider:
   m_ObjectHideFlags: 0

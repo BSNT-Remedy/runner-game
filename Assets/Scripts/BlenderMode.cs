@@ -16,7 +16,8 @@ public class BlenderMode : MonoBehaviour
         {
             collisionDetect.DisableSegmentMovement();
             thePlayer.GetComponent<LaneSwipeController>().enabled = false;
-            touchManager.GetComponent<TouchGestureManipulator3D>().enabled = true;
+            // touchManager.GetComponent<TouchGestureManipulator3D>().enabled = true;
+            touchManager.GetComponent<Rotate>().enabled = true;
             // manipulatableObject.GetComponent<LaneSwipeController>().enabled = true;
             hasEntered = true;
         }
