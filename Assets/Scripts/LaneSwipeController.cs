@@ -79,8 +79,19 @@ public class LaneSwipeController : MonoBehaviour
         // Horizontal swipe?
         if (Mathf.Abs(delta.x) > Mathf.Abs(delta.y))
         {
-            if (delta.x > 0) MoveRight();
-            else             MoveLeft();
+            if (delta.x > 0)
+            {
+                MoveRight();
+                // Pan the camera to x = 8.17 on right swipe
+                if (Camera.main != null)
+                {
+                    Camera.main.transform.position = new Vector3(8.17f, Camera.main.transform.position.y, Camera.main.transform.position.z);
+                }
+            }
+            else
+            {
+                MoveLeft();
+            }
         }
     }
 
