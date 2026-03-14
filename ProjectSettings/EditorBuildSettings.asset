@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Information.unity
     guid: b493b0b439d892d4e86e16d257097b04
+  - enabled: 1
+    path: Assets/Scenes/LearningRun.unity
+    guid: 2c88ba8e25002764a96cc483c526de1c
+  - enabled: 1
+    path: Assets/Scenes/AssessmentRun.unity
+    guid: 1f895d59b1e4193479a3636f93220d14
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   m_UseUCBPForAssetBundles: 0
