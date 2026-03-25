@@ -1042,7 +1042,7 @@ GameObject:
   - component: {fileID: 532538379}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1154,7 +1154,7 @@ GameObject:
   - component: {fileID: 540624859}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1949,7 +1949,7 @@ GameObject:
   - component: {fileID: 981521402}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2228,7 +2228,7 @@ GameObject:
   - component: {fileID: 1010204377}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3209,7 +3209,7 @@ GameObject:
   - component: {fileID: 1796350591}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3541,6 +3541,7 @@ GameObject:
   - component: {fileID: 1940609171}
   - component: {fileID: 1940609172}
   - component: {fileID: 1940609173}
+  - component: {fileID: 1940609174}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3717,10 +3718,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7635b47c47ac5ba4884c6519cda98cf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BlenderMode
-  collisionDetect: {fileID: 620238406}
   inputSystem: {fileID: 1007908846}
   thePlayer: {fileID: 1940609165}
+  buttonPanel: {fileID: 0}
   hasEntered: 0
+  lessonNumber: 1
+--- !u!114 &1940609174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940609165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0340237ed82bf884e8ced416194c64e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SwipeJumpSlideController
+  minSwipeDistance: 50
+  jumpHeight: 5
+  jumpDuration: 0.5
+  slideDuration: 0.7
 --- !u!1 &1941786163
 GameObject:
   m_ObjectHideFlags: 0

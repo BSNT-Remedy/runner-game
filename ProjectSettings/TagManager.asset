@@ -8,6 +8,10 @@ TagManager:
   - Destroy
   - Obstacle
   - BlenderMode
+  - Lesson
+  - BlenderExit
+  - BlenderTips
+  - Ground
   layers:
   - Default
   - TransparentFX
