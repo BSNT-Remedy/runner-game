@@ -1467,12 +1467,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75dd3e293374e8647930ddba5120c582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SegmentGenerator
-  segment:
-  - {fileID: 71166309}
-  - {fileID: 98024577}
-  - {fileID: 422602762}
+  segments: []
   segmentSpeed: 6
-  segmentNum: 0
+  nextSceneName: 
 --- !u!4 &596853883
 Transform:
   m_ObjectHideFlags: 0
@@ -2874,6 +2871,115 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 27.927307, y: 7.5611978, z: 1}
   m_Center: {x: 0.3752632, y: 0.9269359, z: 0}
+--- !u!1 &1566974959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1566974960}
+  - component: {fileID: 1566974962}
+  - component: {fileID: 1566974961}
+  - component: {fileID: 1566974963}
+  m_Layer: 0
+  m_Name: SubCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1566974960
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566974959}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.11064634, y: -0, z: -0, w: 0.9938598}
+  m_LocalPosition: {x: 0, y: 6.4, z: -7.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 12.705, y: 0, z: 0}
+--- !u!81 &1566974961
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566974959}
+  m_Enabled: 1
+--- !u!20 &1566974962
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566974959}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!114 &1566974963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566974959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 025ff566d916a014faa1e61fb4dc0f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LaneSwipeController
+  laneCount: 3
+  laneSpacing: 2.5
+  slideSpeed: 12
+  minimumSwipeDistance: 60
 --- !u!1 &1641283440
 GameObject:
   m_ObjectHideFlags: 0
@@ -3684,12 +3790,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75dd3e293374e8647930ddba5120c582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SegmentGenerator
-  segment:
-  - {fileID: 71166309}
-  - {fileID: 98024577}
-  - {fileID: 422602762}
+  segments: []
   segmentSpeed: 6
-  segmentNum: 0
+  nextSceneName: 
 --- !u!114 &1940609172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3735,10 +3838,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0340237ed82bf884e8ced416194c64e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwipeJumpSlideController
+  cam: {fileID: 2047788360}
+  subCam: {fileID: 1566974959}
   minSwipeDistance: 50
   jumpHeight: 5
   jumpDuration: 0.5
-  slideDuration: 0.7
+  slideDuration: 0.35
 --- !u!1 &1941786163
 GameObject:
   m_ObjectHideFlags: 0
@@ -4292,6 +4397,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1369269006}
+  - {fileID: 1566974960}
   - {fileID: 1289443573}
   - {fileID: 1335409887}
   - {fileID: 71166311}
