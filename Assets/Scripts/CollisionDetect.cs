@@ -15,6 +15,8 @@ public class CollisionDetect : MonoBehaviour
     [SerializeField] GameObject fadeOut;
     public bool hasCollided = false;
 
+    [SerializeField] SwipeJumpSlideController swipeController;
+
     public void OnTriggerEnter(Collider other)
     {
         if(hasCollided) return;
@@ -33,6 +35,7 @@ public class CollisionDetect : MonoBehaviour
         // segment2.GetComponent<SegmentMovement>().enabled = false;
         // segment3.GetComponent<SegmentMovement>().enabled = false;
         collisionFX.Play();
+        swipeController.ForceStopActions();
         thePlayer.GetComponent<PlayerMovement>().enabled = false;
         playerAnimation.GetComponent<Animator>().Play("Stumble Backwards");
         mainCam.GetComponent<Animator>().Play("CollisionCam");

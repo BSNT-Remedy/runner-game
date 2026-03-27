@@ -978,6 +978,7 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   fadeOut: {fileID: 237673997}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &73355908
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1740,6 +1741,7 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   fadeOut: {fileID: 237673997}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &121912463
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7291,6 +7293,7 @@ GameObject:
   - component: {fileID: 580855833}
   - component: {fileID: 580855834}
   - component: {fileID: 580855835}
+  - component: {fileID: 580855836}
   m_Layer: 0
   m_Name: TriggerSystem
   m_TagString: Trigger
@@ -7306,12 +7309,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580855827}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.015, y: -0.202, z: 0.183}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.015, y: -0.20200002, z: 0.18300056}
+  m_LocalScale: {x: 0.5, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2087741662}
+  m_Father: {fileID: 1850561485}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &580855829
 Rigidbody:
@@ -7454,6 +7457,7 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   fadeOut: {fileID: 237673997}
   hasCollided: 0
+  swipeController: {fileID: 1850561486}
 --- !u!114 &580855835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7472,6 +7476,24 @@ MonoBehaviour:
   - {fileID: 1162579125}
   segmentSpeed: 6
   segmentNum: 0
+--- !u!114 &580855836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580855827}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0340237ed82bf884e8ced416194c64e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SwipeJumpSlideController
+  minSwipeDistance: 50
+  jumpHeight: 3
+  jumpDuration: 0.35
+  playerAnimation: {fileID: 0}
+  slideDuration: 0.35
+  colliderObject: {fileID: 0}
 --- !u!1001 &587949931
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7653,6 +7675,7 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   fadeOut: {fileID: 237673997}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &605563089
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7866,6 +7889,7 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   fadeOut: {fileID: 237673997}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!1 &612617055
 GameObject:
   m_ObjectHideFlags: 0
@@ -9467,6 +9491,7 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   fadeOut: {fileID: 237673997}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &704972874
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10875,6 +10900,7 @@ MonoBehaviour:
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!1001 &790339946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12023,7 +12049,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 2087741662}
+    m_TransformParent: {fileID: 1850561485}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3002ebe8866e1ef45ad572e7c7e3cc91, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12134,6 +12160,7 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   fadeOut: {fileID: 237673997}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &905683697
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14193,6 +14220,7 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   fadeOut: {fileID: 237673997}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &1011329629
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15968,6 +15996,7 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   fadeOut: {fileID: 237673997}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &1143130498
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17127,6 +17156,138 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4508970561002598, guid: 21cba551342e0284a87bcb1672a662d2, type: 3}
   m_PrefabInstance: {fileID: 1227667831}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1230096949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1230096954}
+  - component: {fileID: 1230096953}
+  - component: {fileID: 1230096952}
+  - component: {fileID: 1230096951}
+  - component: {fileID: 1230096950}
+  m_Layer: 0
+  m_Name: SubCamera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1230096950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230096949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 025ff566d916a014faa1e61fb4dc0f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LaneSwipeController
+  laneCount: 3
+  laneSpacing: 2.5
+  slideSpeed: 12
+  minimumSwipeDistance: 60
+--- !u!95 &1230096951
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230096949}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6327950747944dc43abb9a9c5c0467e2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!81 &1230096952
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230096949}
+  m_Enabled: 1
+--- !u!20 &1230096953
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230096949}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1230096954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230096949}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.21578135, y: -0, z: -0, w: 0.97644174}
+  m_LocalPosition: {x: 0, y: 3.71, z: -24.78}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 24.923, y: 0, z: 0}
 --- !u!1001 &1247100556
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17444,6 +17605,7 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   fadeOut: {fileID: 237673997}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &1277584448
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20113,6 +20275,7 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   fadeOut: {fileID: 237673997}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!1001 &1460677822
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21888,6 +22051,7 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   fadeOut: {fileID: 237673997}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!1 &1618438358
 GameObject:
   m_ObjectHideFlags: 0
@@ -22255,6 +22419,7 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   fadeOut: {fileID: 237673997}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &1661239498
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22639,6 +22804,7 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   fadeOut: {fileID: 237673997}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &1715463448
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22976,6 +23142,7 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   fadeOut: {fileID: 237673997}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!1001 &1746215572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23834,6 +24001,7 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   fadeOut: {fileID: 237673997}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!1001 &1821647268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24084,6 +24252,7 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   fadeOut: {fileID: 237673997}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &1826323513
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24370,6 +24539,58 @@ Transform:
   - {fileID: 1987429360}
   m_Father: {fileID: 1576130754}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1850561484
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1850561485}
+  - component: {fileID: 1850561486}
+  m_Layer: 0
+  m_Name: Character
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1850561485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850561484}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1444964430}
+  - {fileID: 580855828}
+  m_Father: {fileID: 2087741662}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1850561486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850561484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0340237ed82bf884e8ced416194c64e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SwipeJumpSlideController
+  minSwipeDistance: 50
+  jumpHeight: 2
+  jumpDuration: 0.7
+  playerAnimation: {fileID: 1444964429}
+  slideDuration: 0.7
+  colliderObject: {fileID: 580855828}
 --- !u!1001 &1858192310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25686,6 +25907,7 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   fadeOut: {fileID: 237673997}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &1946260171
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25883,6 +26105,7 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   fadeOut: {fileID: 237673997}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &1958426442
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26159,6 +26382,7 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   fadeOut: {fileID: 237673997}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &1974714421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27691,6 +27915,7 @@ MonoBehaviour:
   mainCam: {fileID: 963194225}
   fadeOut: {fileID: 237673997}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!1001 &2073633872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27930,8 +28155,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 963194228}
-  - {fileID: 1444964430}
-  - {fileID: 580855828}
+  - {fileID: 1850561485}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2087741663
@@ -29076,6 +29300,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 705507995}
+  - {fileID: 1230096954}
   - {fileID: 2087741662}
   - {fileID: 568720974}
   - {fileID: 111400443}

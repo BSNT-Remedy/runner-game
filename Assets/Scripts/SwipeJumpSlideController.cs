@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SwipeJumpSlideController : MonoBehaviour
 {
-    [SerializeField] GameObject cam;
-    [SerializeField] GameObject subCam;
+    // [SerializeField] GameObject cam;
+    // [SerializeField] GameObject subCam;
     
     [Header("Swipe Settings")]
     public float minSwipeDistance = 50f;
@@ -13,31 +13,33 @@ public class SwipeJumpSlideController : MonoBehaviour
     private bool isSwiping = false;
 
     [Header("Jump Settings (No Physics)")]
-    public float jumpHeight = 3f;
+    public float jumpHeight = 2f;
     public float jumpDuration = 0.35f;
+    [SerializeField] GameObject playerAnimation;
     private bool isJumping = false;
     
     [Header("Slide Settings")]
     public float slideDuration = 0.35f;
     private bool isSliding = false;
 
+    [SerializeField] Transform colliderObject;
     private CapsuleCollider col;
     private float originalHeight;
     private Vector3 originalPosition;
 
-    Vector3 freezeCamPos;
-    Quaternion freezeCamRot;
-    private Vector3 subCamInitialLocalPos;
-    private Quaternion subCamInitialLocalRot;
+    // Vector3 freezeCamPos;
+    // Quaternion freezeCamRot;
+    // private Vector3 subCamInitialLocalPos;
+    // private Quaternion subCamInitialLocalRot;
 
     void Start()
     {
-        col = GetComponent<CapsuleCollider>();
+        col = colliderObject.GetComponent<CapsuleCollider>();
         originalHeight = col.height;
         originalPosition = transform.localPosition;
- 
-        subCamInitialLocalPos = subCam.transform.localPosition;
-        subCamInitialLocalRot = subCam.transform.localRotation;
+    
+        // subCamInitialLocalPos = subCam.transform.localPosition;
+        // subCamInitialLocalRot = subCam.transform.localRotation;
     }
 
     void Update()
@@ -115,7 +117,8 @@ public class SwipeJumpSlideController : MonoBehaviour
     System.Collections.IEnumerator JumpRoutine()
     {
         isJumping = true;
-        FreezeCamera();
+        // FreezeCamera();
+        playerAnimation.GetComponent<Animator>().CrossFade("Jump", 0.2f);
 
         float half = jumpDuration / 2f;
         float timer = 0f;
@@ -153,7 +156,8 @@ public class SwipeJumpSlideController : MonoBehaviour
         }
 
         if(!isSliding){
-            UnFreezeCamera();
+            // UnFreezeCamera();
+            playerAnimation.GetComponent<Animator>().CrossFade("Running", 0.2f);
         }
         
         isJumping = false;
@@ -171,13 +175,14 @@ public class SwipeJumpSlideController : MonoBehaviour
     System.Collections.IEnumerator SlideRoutine()
     {
         isSliding = true;
-        FreezeCamera();
+        // FreezeCamera();
+        playerAnimation.GetComponent<Animator>().CrossFade("Stand To Roll", 0.2f);
 
         // --- ROTATE TO -90 ---
         float duration = 0.2f; // how fast to tilt down
         float time = 0f;
 
-        float startX = transform.localEulerAngles.x;
+        float startX = colliderObject.localEulerAngles.x;
         float targetX = -90f;
 
         while (time < duration)
@@ -185,9 +190,9 @@ public class SwipeJumpSlideController : MonoBehaviour
             time += Time.deltaTime;
             float t = time / duration;
 
-            Vector3 rot = transform.localEulerAngles;
+            Vector3 rot = colliderObject.localEulerAngles;
             rot.x = Mathf.LerpAngle(startX, targetX, t);
-            transform.localEulerAngles = rot;
+            colliderObject.localEulerAngles = rot;
 
             yield return null;
         }
@@ -199,7 +204,7 @@ public class SwipeJumpSlideController : MonoBehaviour
         duration = 0.2f;
         time = 0f;
 
-        startX = transform.localEulerAngles.x;
+        startX = colliderObject.localEulerAngles.x;
         targetX = 0f;
 
         while (time < duration)
@@ -207,15 +212,16 @@ public class SwipeJumpSlideController : MonoBehaviour
             time += Time.deltaTime;
             float t = time / duration;
 
-            Vector3 rot = transform.localEulerAngles;
+            Vector3 rot = colliderObject.localEulerAngles;
             rot.x = Mathf.LerpAngle(startX, targetX, t);
-            transform.localEulerAngles = rot;
+            colliderObject.localEulerAngles = rot;
 
             yield return null;
         }
 
         if(!isJumping){
-            UnFreezeCamera();
+            // UnFreezeCamera();
+            playerAnimation.GetComponent<Animator>().CrossFade("Running", 0.2f);
         }
 
         isSliding = false;
@@ -240,11 +246,26 @@ public class SwipeJumpSlideController : MonoBehaviour
 
     void FreezeCamera()
     {
-        cam.SetActive(false);
+        // cam.SetActive(false);
     }
 
     void UnFreezeCamera() {        
-        cam.SetActive(true);
+        // cam.SetActive(true);
+    }
+
+    public void ForceStopActions()
+    {
+        StopAllCoroutines();
+        isJumping = false;
+        isSliding = false;
+
+        colliderObject.localEulerAngles = Vector3.zero;
+
+        Vector3 pos = transform.localPosition;
+        pos.y = 0;
+        transform.localPosition = pos;
+
+        playerAnimation.GetComponent<Animator>().Play("Stumble Backwards");
     }
 
 }
