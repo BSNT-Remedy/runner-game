@@ -12,6 +12,8 @@ TagManager:
   - BlenderExit
   - BlenderTips
   - Ground
+  - Exercise
+  - PlayerAnimation
   layers:
   - Default
   - TransparentFX

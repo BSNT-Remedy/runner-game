@@ -7,6 +7,7 @@ public class BlenderMode : MonoBehaviour
 {
     [SerializeField] GameObject inputSystem;
     [SerializeField] GameObject thePlayer;
+    [SerializeField] GameObject playerAnimation;
     [SerializeField] GameObject buttonPanel;
     public bool hasEntered;
     public int lessonNumber = 1;
@@ -18,6 +19,7 @@ public class BlenderMode : MonoBehaviour
         if(other.gameObject.CompareTag("BlenderMode"))
         {
             DisableSegmentMovement();
+            playerAnimation.GetComponent<Animator>().CrossFade("Breathing Idle", 0.2f);
             buttonPanel.SetActive(true);
 
             Button[] allButtons = buttonPanel.GetComponentsInChildren<Button>();
@@ -47,6 +49,7 @@ public class BlenderMode : MonoBehaviour
 
     public void OnTriggerExit(Collider other) {
         if(other.gameObject.CompareTag("BlenderExit")) {
+            // playerAnimation.GetComponent<Animator>().Play("Running");
             buttonPanel.SetActive(false);
             thePlayer.GetComponent<LaneSwipeController>().enabled = true;
             inputSystem.SetActive(false);
@@ -65,6 +68,11 @@ public class BlenderMode : MonoBehaviour
     }
 
     public void ContinueRunning() {
+        GameObject playerAnim = GameObject.FindWithTag("PlayerAnimation"); 
+        if (playerAnim != null) {
+            playerAnim.GetComponent<Animator>().Play("Running");
+        }
+        
         var movers = FindObjectsOfType<SegmentMovement>(includeInactive: true);
         foreach (var m in movers)
         {
@@ -73,7 +81,7 @@ public class BlenderMode : MonoBehaviour
         }
         // StartCoroutine(ExitTrigger());
         
-        
+        // playerAnimation.GetComponent<Animator>().Play("Running");
     }
 
     IEnumerator ExitTrigger() {
