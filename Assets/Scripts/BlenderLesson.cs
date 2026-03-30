@@ -20,19 +20,23 @@ public class BlenderLesson : MonoBehaviour
     public void OnTriggerExit(Collider other)
     {
         if(other.gameObject.CompareTag("Exercise")) {
-            lessonPanel.SetActive(false);
+            // lessonPanel.SetActive(false);
         }
     }
     IEnumerator DisplayLesson()
     {
         lessonPanel.SetActive(true);
-        foreach (GameObject text in lessonText)
+        int stopIndex = lessonTextIndex + 3;
+        // foreach (GameObject text in lessonText)
+        for (int i = lessonTextIndex; i < stopIndex; i++)
         {
-            text.SetActive(true);
+            lessonText[lessonTextIndex].SetActive(true);
             yield return new WaitForSeconds(4.0f);
-            text.SetActive(false);
+            lessonText[lessonTextIndex].SetActive(false);
+            lessonTextIndex++;
         }
         
+        lessonPanel.SetActive(false);
         // lessonText[lessonTextIndex].SetActive(true);
         // lessonTextIndex+=1;
     }

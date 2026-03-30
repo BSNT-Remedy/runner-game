@@ -11,6 +11,8 @@ public class ExerciseAnimation : MonoBehaviour
     [SerializeField] GameObject mainCamera;
     [SerializeField] GameObject subCamera;
     [SerializeField] GameObject cameraPosition;
+
+    public int gymIndex = 0;
     // [SerializeField] SwipeJumpSlideController swipeController;
 
     public void OnTriggerEnter(Collider other)
@@ -26,6 +28,7 @@ public class ExerciseAnimation : MonoBehaviour
     {
         if (other.CompareTag("Exercise"))
         {
+            cameraPosition.GetComponent<LaneSwipeController>().enabled = true;
             thePlayer.GetComponent<LaneSwipeController>().enabled = true;
             thePlayer.GetComponent<PlayerMovement>().enabled = true;
             character.GetComponent<SwipeJumpSlideController>().enabled = true;
@@ -42,14 +45,33 @@ public class ExerciseAnimation : MonoBehaviour
         // swipeController.ForceStopActions();
         // thePlayer.GetComponent<PlayerMovement>().enabled = false;
         // yield return PlayAnimation(playerAnimation.GetComponent<Animator>(), "Breathing Idle");
-        yield return PlayAnimation(playerAnimation.GetComponent<Animator>(), "Idle To Push Up");
-        yield return PlayAnimation(playerAnimation.GetComponent<Animator>(), "Push Up");
-        yield return new WaitForSeconds(6.0f);
-        yield return PlayAnimation(playerAnimation.GetComponent<Animator>(), "Push Up To Idle"); 
+        if(gymIndex == 0)
+        {
+            yield return PlayAnimation(playerAnimation.GetComponent<Animator>(), "Idle To Push Up");
+            yield return PlayAnimation(playerAnimation.GetComponent<Animator>(), "Push Up");
+            yield return new WaitForSeconds(6.0f);
+            yield return PlayAnimation(playerAnimation.GetComponent<Animator>(), "Push Up To Idle");
+        }
+
+        if(gymIndex == 1)
+        {
+            yield return PlayAnimation(playerAnimation.GetComponent<Animator>(), "Idle To Situp");
+            yield return PlayAnimation(playerAnimation.GetComponent<Animator>(), "Situps");
+            yield return new WaitForSeconds(6.0f);
+            yield return PlayAnimation(playerAnimation.GetComponent<Animator>(), "Situp To Idle");
+        }
+
+        if(gymIndex == 2)
+        {
+            yield return PlayAnimation(playerAnimation.GetComponent<Animator>(), "Air Squat");
+            yield return new WaitForSeconds(6.0f);
+        }
+
         // playerAnimation.GetComponent<Animator>().CrossFade("Push Up", 0.2f);
         
         // playerAnimation.GetComponent<Animator>().CrossFade("Push Up To Idle", 0.2f);
-        yield return new WaitForSeconds(2.0f);
+        // yield return new WaitForSeconds(2.0f);
+        gymIndex++;
         ContinueRunning();
         yield return PlayAnimation(playerAnimation.GetComponent<Animator>(), "Running"); 
     }
@@ -65,6 +87,7 @@ public class ExerciseAnimation : MonoBehaviour
     }
 
     public void ContinueRunning() {
+        
         var movers = FindObjectsOfType<SegmentMovement>(includeInactive: true);
         foreach (var m in movers)
         {

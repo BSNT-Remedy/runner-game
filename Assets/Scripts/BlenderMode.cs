@@ -7,8 +7,10 @@ public class BlenderMode : MonoBehaviour
 {
     [SerializeField] GameObject inputSystem;
     [SerializeField] GameObject thePlayer;
+    [SerializeField] GameObject character;
     [SerializeField] GameObject playerAnimation;
     [SerializeField] GameObject buttonPanel;
+    public ModeManager modeManager;
     public bool hasEntered;
     public int lessonNumber = 1;
 
@@ -42,6 +44,7 @@ public class BlenderMode : MonoBehaviour
             lessonNumber += 1;
             
             thePlayer.GetComponent<LaneSwipeController>().enabled = false;
+            character.GetComponent<SwipeJumpSlideController>().enabled = false;
             inputSystem.SetActive(true);
             hasEntered = true;
         }
@@ -52,7 +55,9 @@ public class BlenderMode : MonoBehaviour
             // playerAnimation.GetComponent<Animator>().Play("Running");
             buttonPanel.SetActive(false);
             thePlayer.GetComponent<LaneSwipeController>().enabled = true;
+            character.GetComponent<SwipeJumpSlideController>().enabled = true;
             inputSystem.SetActive(false);
+            modeManager.ClearMode();
             hasEntered = false;
         }
     }
