@@ -17,6 +17,11 @@ public class GateManager : MonoBehaviour
 
     private bool hasPassed = false;
     private static int score = 0;
+    // Expose the accumulated gate score for display
+    public static int Score => score;
+    [Header("Assessment")]
+    public bool isFinalSegment = false;
+    public LeaderboardManager leaderboardManager;
 
     private void Start()
     {
@@ -52,6 +57,18 @@ public class GateManager : MonoBehaviour
         gate2.SetActive(false);
         gate3.SetActive(false);
 
+        // If this gate choice occurred in the final assessment segment, show the leaderboard
+        if (isFinalSegment)
+        {
+            if (leaderboardManager != null)
+            {
+                leaderboardManager.ShowLeaderboard();
+            }
+            else
+            {
+                Time.timeScale = 0f;
+            }
+        }
         // Optional: Restart or load next attempt after delay
         // StartCoroutine(RestartAfterDelay(2f));
     }

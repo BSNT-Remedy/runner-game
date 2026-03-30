@@ -8,6 +8,8 @@ public class SegmentGeneratorAssess : MonoBehaviour
     public GameObject[] segments;  // 10 segments
     public float segmentSpeed = 6;
     public string nextSceneName;   // name of the scene to load
+    public LeaderboardManager leaderboardManager; // reference to show leaderboard when done
+    public string playerTag = "Player"; // tag to detect player crossing final trigger
 
     private List<int> segmentOrder; 
     private int currentIndex = 0;  
@@ -28,8 +30,7 @@ public class SegmentGeneratorAssess : MonoBehaviour
         {
             if (currentIndex >= segmentOrder.Count)
             {
-                Debug.Log("All segments spawned! Loading next scene...");
-                StartCoroutine(LoadNextSceneAfterDelay(1.5f));
+                // All segments already spawned; wait for player to reach final spawned segment.
                 return;
             }
 
@@ -40,6 +41,23 @@ public class SegmentGeneratorAssess : MonoBehaviour
             newSeg.SetActive(true);
 
             Debug.Log("Spawned segment: " + newSeg.name);
+
+            // If this was the last segment spawned, attach a watcher to detect when player finishes it
+            if (currentIndex >= segmentOrder.Count)
+            {
+                var watcher = newSeg.AddComponent<FinalSegmentWatcher>();
+                watcher.Setup(leaderboardManager, playerTag, 1f);
+                Debug.Log("Attached FinalSegmentWatcher to last segment.");
+
+                // If this segment contains a GateManager, mark it as the final assessment gate so choosing a gate shows the leaderboard
+                var gateManager = newSeg.GetComponentInChildren<GateManager>();
+                if (gateManager != null)
+                {
+                    gateManager.isFinalSegment = true;
+                    gateManager.leaderboardManager = leaderboardManager;
+                    Debug.Log("Marked GateManager in final segment to show leaderboard when gate chosen.");
+                }
+            }
         }
     }
 
