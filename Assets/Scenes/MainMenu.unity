@@ -1962,8 +1962,9 @@ GameObject:
   - component: {fileID: 316269868}
   - component: {fileID: 316269867}
   - component: {fileID: 316269866}
+  - component: {fileID: 316269869}
   m_Layer: 5
-  m_Name: StartGame
+  m_Name: PlayButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1982,11 +1983,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 230864560}
+  - {fileID: 1645218269}
   m_Father: {fileID: 1864069935}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -554}
+  m_AnchoredPosition: {x: 0, y: -543}
   m_SizeDelta: {x: 500, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &316269866
@@ -2083,6 +2085,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316269864}
   m_CullTransparentMesh: 1
+--- !u!114 &316269869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 316269864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4530db5afc771d040b23ecb21190c703, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonBounce
+  pressedScale: 0.6
+  animationSpeed: 10
 --- !u!1 &317206890
 GameObject:
   m_ObjectHideFlags: 0
@@ -2140,6 +2156,7 @@ MonoBehaviour:
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &317206893
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3645,6 +3662,7 @@ MonoBehaviour:
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &574843147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3904,6 +3922,7 @@ MonoBehaviour:
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &593924257
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4017,7 +4036,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.000012398, y: -119}
+  m_AnchoredPosition: {x: -0.000012398, y: -252}
   m_SizeDelta: {x: 886.0013, y: 96.6842}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &595190118
@@ -5111,6 +5130,7 @@ MonoBehaviour:
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &760331041
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6395,6 +6415,7 @@ MonoBehaviour:
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &894919784
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7362,6 +7383,7 @@ MonoBehaviour:
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &1153189099
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8974,6 +8996,7 @@ MonoBehaviour:
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &1337408597
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9448,6 +9471,7 @@ MonoBehaviour:
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &1405735258
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10590,6 +10614,7 @@ MonoBehaviour:
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &1523989702
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11281,7 +11306,7 @@ GameObject:
   - component: {fileID: 1645218271}
   - component: {fileID: 1645218270}
   m_Layer: 5
-  m_Name: PlayButton
+  m_Name: PlayImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11294,17 +11319,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1645218268}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1864069935}
+  m_Father: {fileID: 316269865}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -531}
-  m_SizeDelta: {x: 600, y: 300}
+  m_AnchoredPosition: {x: 0, y: 12.000061}
+  m_SizeDelta: {x: 800, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1645218270
 MonoBehaviour:
@@ -11326,7 +11351,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: e27bc99e795d8a443a237ee641bb4e02, type: 3}
+  m_Texture: {fileID: 2800000, guid: a2e142be0a8d8874f95241c30a5cf02a, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -12192,6 +12217,7 @@ MonoBehaviour:
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &1809620289
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12626,7 +12652,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1263383647}
-  - {fileID: 1645218269}
   - {fileID: 316269865}
   m_Father: {fileID: 1261436351}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13341,6 +13366,7 @@ MonoBehaviour:
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &2081299247
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13503,7 +13529,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3002ebe8866e1ef45ad572e7c7e3cc91, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.71
+      value: -3.865
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3002ebe8866e1ef45ad572e7c7e3cc91, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13511,23 +13537,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3002ebe8866e1ef45ad572e7c7e3cc91, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.99
+      value: -13.87387
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3002ebe8866e1ef45ad572e7c7e3cc91, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.85181594
+      value: 0.62251467
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3002ebe8866e1ef45ad572e7c7e3cc91, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3002ebe8866e1ef45ad572e7c7e3cc91, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.52384126
+      value: 0.7826082
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3002ebe8866e1ef45ad572e7c7e3cc91, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3002ebe8866e1ef45ad572e7c7e3cc91, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -13535,7 +13561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3002ebe8866e1ef45ad572e7c7e3cc91, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 63.181
+      value: 103
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3002ebe8866e1ef45ad572e7c7e3cc91, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -13544,6 +13570,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3002ebe8866e1ef45ad572e7c7e3cc91, type: 3}
       propertyPath: m_Name
       value: Ch09_nonPBR@Running
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3002ebe8866e1ef45ad572e7c7e3cc91, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13636,6 +13666,7 @@ MonoBehaviour:
   mainCam: {fileID: 0}
   fadeOut: {fileID: 0}
   hasCollided: 0
+  swipeController: {fileID: 0}
 --- !u!65 &2140501219
 BoxCollider:
   m_ObjectHideFlags: 0

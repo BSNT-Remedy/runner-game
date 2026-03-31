@@ -20,6 +20,7 @@ public class MainMenuControl : MonoBehaviour
         StartCoroutine(FadeInTurnOff());
         if (hasClicked == true)
         {
+            // fadeIn.SetActive(false);
             staticCam.SetActive(true);
             animCam.SetActive(false);
             menuControls.SetActive(true);

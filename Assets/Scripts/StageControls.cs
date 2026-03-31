@@ -16,7 +16,8 @@ public class StageControls : MonoBehaviour
     public float[] stagePositions = { -0.17f, 8.17f, 16.17f };
 
     [Tooltip("Stage names corresponding to each position.")]
-    public string[] stageNames = { "Endless", "Learning", "Assessment" };
+    // public string[] stageNames = { "Endless", "Learning", "Assessment" };
+    [SerializeField] GameObject[] stageNames;
 
     [Header("UI")]
     [Tooltip("Text component to display the current stage name.")]
@@ -112,9 +113,16 @@ public class StageControls : MonoBehaviour
 
     void UpdateStageName(int stageIndex)
     {
-        if (stageNameText != null && stageIndex >= 0 && stageIndex < stageNames.Length)
+        if (stageIndex >= 0 && stageIndex < stageNames.Length)
         {
-            stageNameText.text = stageNames[stageIndex];
+            for (int i = 0; i < stageNames.Length; i++)
+            {
+                if(i == stageIndex)
+                {
+                    stageNames[i].SetActive(true);
+                }else stageNames[i].SetActive(false);
+                
+            }
         }
     }
 

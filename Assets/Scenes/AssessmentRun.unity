@@ -49541,6 +49541,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseManager
   pauseMenuUI: {fileID: 1449121777}
+  fadeOut: {fileID: 0}
+  Audio: {fileID: 0}
+  audioOff: {fileID: 0}
+  audioOn: {fileID: 0}
+  isMute: 0
 --- !u!1001 &1919119764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52059,7 +52064,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -37.000046, y: 60.99997}
+  m_AnchoredPosition: {x: 73, y: 60.99997}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2058079137
@@ -52075,6 +52080,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseManager
   pauseMenuUI: {fileID: 1449121777}
+  fadeOut: {fileID: 0}
+  Audio: {fileID: 0}
+  audioOff: {fileID: 0}
+  audioOn: {fileID: 0}
+  isMute: 0
 --- !u!1001 &2059815143
 PrefabInstance:
   m_ObjectHideFlags: 0
