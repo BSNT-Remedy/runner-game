@@ -26,9 +26,9 @@ public class BlenderLesson : MonoBehaviour
     IEnumerator DisplayLesson()
     {
         lessonPanel.SetActive(true);
-        int stopIndex = lessonTextIndex + 3;
+        int stopIndex = lessonTextIndex + 2;
         // foreach (GameObject text in lessonText)
-        for (int i = lessonTextIndex; i < stopIndex; i++)
+        for (int i = lessonTextIndex; i <= stopIndex; i++)
         {
             lessonText[lessonTextIndex].SetActive(true);
             yield return new WaitForSeconds(4.0f);

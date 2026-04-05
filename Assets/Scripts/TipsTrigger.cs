@@ -21,7 +21,7 @@ public class TipsTrigger : MonoBehaviour
         GameObject newPanel = tipsPanel[tipsPanelIndex];
         newPanel.SetActive(true);
         tipsPanelIndex += 1;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         newPanel.SetActive(false);
     }
 

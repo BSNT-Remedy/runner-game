@@ -44,6 +44,7 @@ public class BlenderMode : MonoBehaviour
             lessonNumber += 1;
             
             thePlayer.GetComponent<LaneSwipeController>().enabled = false;
+            thePlayer.GetComponent<PlayerMovement>().enabled = false;
             character.GetComponent<SwipeJumpSlideController>().enabled = false;
             inputSystem.SetActive(true);
             hasEntered = true;
@@ -55,6 +56,7 @@ public class BlenderMode : MonoBehaviour
             // playerAnimation.GetComponent<Animator>().Play("Running");
             buttonPanel.SetActive(false);
             thePlayer.GetComponent<LaneSwipeController>().enabled = true;
+            thePlayer.GetComponent<PlayerMovement>().enabled = true;
             character.GetComponent<SwipeJumpSlideController>().enabled = true;
             inputSystem.SetActive(false);
             modeManager.ClearMode();

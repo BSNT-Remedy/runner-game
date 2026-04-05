@@ -57,14 +57,16 @@ public class ExerciseAnimation : MonoBehaviour
         {
             yield return PlayAnimation(playerAnimation.GetComponent<Animator>(), "Idle To Situp");
             yield return PlayAnimation(playerAnimation.GetComponent<Animator>(), "Situps");
-            yield return new WaitForSeconds(6.0f);
+            yield return new WaitForSeconds(7f);
             yield return PlayAnimation(playerAnimation.GetComponent<Animator>(), "Situp To Idle");
         }
 
         if(gymIndex == 2)
         {
             yield return PlayAnimation(playerAnimation.GetComponent<Animator>(), "Air Squat");
-            yield return new WaitForSeconds(6.0f);
+            yield return new WaitForSeconds(11.0f);
+            // playerAnimation.GetComponent<Animator>().CrossFade("Breathing Idle", 0.2f);
+            yield return new WaitForSeconds(2.0f);
         }
 
         // playerAnimation.GetComponent<Animator>().CrossFade("Push Up", 0.2f);
