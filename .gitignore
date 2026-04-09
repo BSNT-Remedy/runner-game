@@ -1,3 +1,4 @@
+# --- Unity Folders ---
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -5,12 +6,35 @@
 [Bb]uilds/
 [Ll]ogs/
 [Mm]emoryCaptures/
+/[Aa]ssets/AddressableAssetsData/*/*.bin*
+/[Aa]ssets/StreamingAssets/aa.meta
+/[Aa]ssets/StreamingAssets/aa/*
+
+# --- Specific Mobile/Build Artifacts ---
+# Ignore Android/iOS specific generated folders
+/[Aa]ssets/Plugins/Android/libs/
+/[Aa]ssets/Plugins/iOS/
+# Ignore Gradle build artifacts
+.gradle/
+
+# --- IDE & OS Files ---
 .vs/
+.idea/
+.vscode/
 *.csproj
 *.unityproj
 *.sln
+*.suo
 *.user
 *.userprefs
-.idea/
+*.pidb
+*.booproj
+*.svclog
+*.com.apple.timemachine.supported
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# --- Crashlytics/Analytics ---
+Firebase/*
+crashlytics-build.properties
