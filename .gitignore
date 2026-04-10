@@ -38,3 +38,37 @@ desktop.ini
 # --- Crashlytics/Analytics ---
 Firebase/*
 crashlytics-build.properties
+
+################################
+# IL2CPP / Native build output #
+################################
+
+.utmp/
+Library/Il2cppBuildCache/
+Temp/Il2cppBuildCache/
+
+*.cpp
+*.pdb
+*.bin
+*.cmake
+*.make
+*.ninja
+*.a
+*.so
+
+
+# IL2CPP cache
+Library/Il2cppBuildCache/
+Temp/Il2cppBuildCache/
+
+# Android / iOS native build artifacts
+Build/
+Builds/
+
+ExportedObj/
+.gradle/
+
+*.apk
+*.aab
+*.ipa
+*_BackUpThisFolder_ButDontShipItWithYourGame/
