@@ -13,7 +13,6 @@ public class ExerciseAnimation : MonoBehaviour
     [SerializeField] GameObject cameraPosition;
 
     public int gymIndex = 0;
-    // [SerializeField] SwipeJumpSlideController swipeController;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -42,9 +41,7 @@ public class ExerciseAnimation : MonoBehaviour
         thePlayer.GetComponent<LaneSwipeController>().enabled = false;
         thePlayer.GetComponent<PlayerMovement>().enabled = false;
         character.GetComponent<SwipeJumpSlideController>().enabled = false;
-        // swipeController.ForceStopActions();
-        // thePlayer.GetComponent<PlayerMovement>().enabled = false;
-        // yield return PlayAnimation(playerAnimation.GetComponent<Animator>(), "Breathing Idle");
+
         if(gymIndex == 0)
         {
             yield return PlayAnimation(playerAnimation.GetComponent<Animator>(), "Idle To Push Up");
@@ -65,14 +62,10 @@ public class ExerciseAnimation : MonoBehaviour
         {
             yield return PlayAnimation(playerAnimation.GetComponent<Animator>(), "Air Squat");
             yield return new WaitForSeconds(11.0f);
-            // playerAnimation.GetComponent<Animator>().CrossFade("Breathing Idle", 0.2f);
             yield return new WaitForSeconds(2.0f);
         }
 
-        // playerAnimation.GetComponent<Animator>().CrossFade("Push Up", 0.2f);
         
-        // playerAnimation.GetComponent<Animator>().CrossFade("Push Up To Idle", 0.2f);
-        // yield return new WaitForSeconds(2.0f);
         gymIndex++;
         ContinueRunning();
         yield return PlayAnimation(playerAnimation.GetComponent<Animator>(), "Running"); 

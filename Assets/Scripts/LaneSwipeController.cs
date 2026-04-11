@@ -38,10 +38,8 @@ public class LaneSwipeController : MonoBehaviour
         MoveTowardsTargetLane();
     }
 
-    // --- Swipe handling ---
     void ReadSwipe()
     {
-        // Prefer touch on mobile
         if (Touchscreen.current != null)
         {
             var touch = Touchscreen.current.primaryTouch;
@@ -56,7 +54,6 @@ public class LaneSwipeController : MonoBehaviour
                 TryHandleSwipe(end - swipeStart);
             }
         }
-        // Mouse fallback for editor testing
         else if (Mouse.current != null)
         {
             if (Mouse.current.leftButton.wasPressedThisFrame)
@@ -76,7 +73,6 @@ public class LaneSwipeController : MonoBehaviour
         if (delta.magnitude < minimumSwipeDistance)
             return;
 
-        // Horizontal swipe?
         if (Mathf.Abs(delta.x) > Mathf.Abs(delta.y))
         {
             if (delta.x > 0) MoveRight();
@@ -84,17 +80,14 @@ public class LaneSwipeController : MonoBehaviour
         }
     }
 
-    // --- Lane movement ---
     void MoveLeft()
     {
         targetLaneIndex = Mathf.Max(0, targetLaneIndex - 1);
-        // Debug.Log($"Lane -> {targetLaneIndex}");
     }
 
     void MoveRight()
     {
         targetLaneIndex = Mathf.Min(laneCount - 1, targetLaneIndex + 1);
-        // Debug.Log($"Lane -> {targetLaneIndex}");
     }
 
     void MoveTowardsTargetLane()
@@ -104,7 +97,6 @@ public class LaneSwipeController : MonoBehaviour
         float newX = Mathf.MoveTowards(pos.x, targetX, slideSpeed * Time.deltaTime);
         transform.position = new Vector3(newX, pos.y, pos.z);
 
-        // Update current lane when we arrive
         if (Mathf.Approximately(newX, targetX))
             currentLaneIndex = targetLaneIndex;
     }
@@ -117,16 +109,12 @@ public class LaneSwipeController : MonoBehaviour
 
     float LaneIndexToWorldX(int laneIndex)
     {
-        // Example for 3 lanes (indices 0,1,2):
-        // center = 1 → offsets: [-1, 0, +1] * spacing
         float offsetFromCenter = laneIndex - centerLaneIndex;
         return offsetFromCenter * laneSpacing;
     }
 
     int GetCenterLaneIndex()
     {
-        // For odd lane counts, the exact center (e.g., 3→1, 5→2).
-        // For even lane counts, this returns the left-of-center lane.
         return Mathf.Clamp(laneCount / 2, 0, Mathf.Max(0, laneCount - 1));
     }
 }

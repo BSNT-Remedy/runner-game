@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class SwipeJumpSlideController : MonoBehaviour
 {
-    // [SerializeField] GameObject cam;
-    // [SerializeField] GameObject subCam;
     
     [Header("Swipe Settings")]
     public float minSwipeDistance = 50f;
@@ -27,10 +25,6 @@ public class SwipeJumpSlideController : MonoBehaviour
     private float originalHeight;
     private Vector3 originalPosition;
 
-    // Vector3 freezeCamPos;
-    // Quaternion freezeCamRot;
-    // private Vector3 subCamInitialLocalPos;
-    // private Quaternion subCamInitialLocalRot;
 
     void Start()
     {
@@ -38,8 +32,6 @@ public class SwipeJumpSlideController : MonoBehaviour
         originalHeight = col.height;
         originalPosition = transform.localPosition;
     
-        // subCamInitialLocalPos = subCam.transform.localPosition;
-        // subCamInitialLocalRot = subCam.transform.localRotation;
     }
 
     void Update()
@@ -117,7 +109,6 @@ public class SwipeJumpSlideController : MonoBehaviour
     System.Collections.IEnumerator JumpRoutine()
     {
         isJumping = true;
-        // FreezeCamera();
         playerAnimation.GetComponent<Animator>().CrossFade("Jump", 0.2f);
 
         float half = jumpDuration / 2f;
@@ -156,7 +147,6 @@ public class SwipeJumpSlideController : MonoBehaviour
         }
 
         if(!isSliding){
-            // UnFreezeCamera();
             playerAnimation.GetComponent<Animator>().CrossFade("Running", 0.2f);
         }
         
@@ -175,7 +165,6 @@ public class SwipeJumpSlideController : MonoBehaviour
     System.Collections.IEnumerator SlideRoutine()
     {
         isSliding = true;
-        // FreezeCamera();
         playerAnimation.GetComponent<Animator>().CrossFade("Stand To Roll", 0.2f);
 
         // --- ROTATE TO -90 ---
@@ -220,38 +209,12 @@ public class SwipeJumpSlideController : MonoBehaviour
         }
 
         if(!isJumping){
-            // UnFreezeCamera();
             playerAnimation.GetComponent<Animator>().CrossFade("Running", 0.2f);
         }
 
         isSliding = false;
     }
 
-    // void FreezeCamera()
-    // {
-    //     subCam.transform.SetParent(null, true);
-    //     subCam.SetActive(true);
-    //     cam.SetActive(false);
-    // }
-
-    // void UnFreezeCamera() {        
-    //     subCam.transform.localPosition = subCamInitialLocalPos;
-    //     subCam.transform.localRotation  = subCamInitialLocalRot;
-
-    //     subCam.transform.SetParent(this.transform, false);
-    //     cam.SetActive(true);
-    //     subCam.SetActive(false);
-    // }
-
-
-    void FreezeCamera()
-    {
-        // cam.SetActive(false);
-    }
-
-    void UnFreezeCamera() {        
-        // cam.SetActive(true);
-    }
 
     public void ForceStopActions()
     {

@@ -27,7 +27,6 @@ public class BlenderLesson : MonoBehaviour
     {
         lessonPanel.SetActive(true);
         int stopIndex = lessonTextIndex + 2;
-        // foreach (GameObject text in lessonText)
         for (int i = lessonTextIndex; i <= stopIndex; i++)
         {
             lessonText[lessonTextIndex].SetActive(true);
@@ -37,7 +36,5 @@ public class BlenderLesson : MonoBehaviour
         }
         
         lessonPanel.SetActive(false);
-        // lessonText[lessonTextIndex].SetActive(true);
-        // lessonTextIndex+=1;
     }
 }

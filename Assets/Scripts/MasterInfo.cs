@@ -6,7 +6,6 @@ public class MasterInfo : MonoBehaviour
     public static int fruitCount = 0;
     [SerializeField] GameObject coinDisplay;
     public static int distanceRun = 0;
-    // [SerializeField] int internalDistance;
     public static int internalDistance = 0;
     [SerializeField] GameObject runDisplay;
     [SerializeField] GameObject fruitDisplay;

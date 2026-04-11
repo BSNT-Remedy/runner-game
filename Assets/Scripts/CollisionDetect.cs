@@ -31,9 +31,6 @@ public class CollisionDetect : MonoBehaviour
 
     IEnumerator CollisionEnd()
     {
-        // segment1.GetComponent<SegmentMovement>().enabled = false;
-        // segment2.GetComponent<SegmentMovement>().enabled = false;
-        // segment3.GetComponent<SegmentMovement>().enabled = false;
         collisionFX.Play();
         swipeController.ForceStopActions();
         thePlayer.GetComponent<PlayerMovement>().enabled = false;

@@ -6,7 +6,6 @@ public class SegmentGenerator : MonoBehaviour
 {
     public GameObject[] segment;
     public float segmentSpeed = 6;
-    // [SerializeField] int zPos = 100;
     [SerializeField] int segmentNum;
 
     

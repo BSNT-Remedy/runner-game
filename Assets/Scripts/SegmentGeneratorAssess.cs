@@ -1,15 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; // required for scene management
+using UnityEngine.SceneManagement;
 
 public class SegmentGeneratorAssess : MonoBehaviour
 {
-    public GameObject[] segments;  // 10 segments
+    public GameObject[] segments;
     public float segmentSpeed = 6;
-    public string nextSceneName;   // name of the scene to load
-    public LeaderboardManager leaderboardManager; // reference to show leaderboard when done
-    public string playerTag = "Player"; // tag to detect player crossing final trigger
+    public string nextSceneName;
+    public LeaderboardManager leaderboardManager;
+    public string playerTag = "Player";
 
     private List<int> segmentOrder; 
     private int currentIndex = 0;  

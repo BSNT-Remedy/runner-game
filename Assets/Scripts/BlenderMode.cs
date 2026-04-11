@@ -53,7 +53,6 @@ public class BlenderMode : MonoBehaviour
 
     public void OnTriggerExit(Collider other) {
         if(other.gameObject.CompareTag("BlenderExit")) {
-            // playerAnimation.GetComponent<Animator>().Play("Running");
             buttonPanel.SetActive(false);
             thePlayer.GetComponent<LaneSwipeController>().enabled = true;
             thePlayer.GetComponent<PlayerMovement>().enabled = true;
@@ -83,12 +82,9 @@ public class BlenderMode : MonoBehaviour
         var movers = FindObjectsOfType<SegmentMovement>(includeInactive: true);
         foreach (var m in movers)
         {
-            // m.StopAllCoroutines();
             m.GetComponent<SegmentMovement>().enabled = true;
         }
-        // StartCoroutine(ExitTrigger());
         
-        // playerAnimation.GetComponent<Animator>().Play("Running");
     }
 
     IEnumerator ExitTrigger() {

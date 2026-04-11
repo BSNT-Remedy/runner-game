@@ -46,7 +46,6 @@ public class PauseManager : MonoBehaviour
     public void GoToMenu()
     {
         StartCoroutine(Menu());
-        // SceneManager.LoadScene(0);
     }
 
     IEnumerator Menu()

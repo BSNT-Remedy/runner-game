@@ -23,7 +23,6 @@ public class LoadToStage : MonoBehaviour
 
         yield return new WaitForSeconds(2);
 
-        // Load the configured build index (defaults to 1 = Endless)
         SceneManager.LoadScene(stageBuildIndex);
     }
 }

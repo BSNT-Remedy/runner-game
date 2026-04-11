@@ -16,7 +16,6 @@ public class StageControls : MonoBehaviour
     public float[] stagePositions = { -0.17f, 8.17f, 16.17f };
 
     [Tooltip("Stage names corresponding to each position.")]
-    // public string[] stageNames = { "Endless", "Learning", "Assessment" };
     [SerializeField] GameObject[] stageNames;
 
     [Header("UI")]
